@@ -6,7 +6,7 @@ cask "flashspace" do
   name "FlashSpace"
   desc "Blazingly fast virtual workspace manager"
   homepage "https://github.com/wojciech-kulik/FlashSpace"
-  
+
   livecheck do
     url :url
     strategy :github_latest
