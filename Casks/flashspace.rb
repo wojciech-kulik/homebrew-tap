@@ -4,8 +4,13 @@ cask "flashspace" do
 
   url "https://github.com/wojciech-kulik/FlashSpace/releases/download/v#{version}/FlashSpace.app.zip"
   name "FlashSpace"
-  desc "Blazingly fast virtual workspace manager for macOS"
+  desc "Blazingly fast virtual workspace manager"
   homepage "https://github.com/wojciech-kulik/FlashSpace"
+  
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sonoma"
 
@@ -13,11 +18,11 @@ cask "flashspace" do
 
   zap trash: [
     "~/Library/Application Scripts/pl.wojciechkulik.FlashSpace",
-    "~/Library/Caches/pl.wojciechkulik.FlashSpace",
-    "~/Library/Preferences/pl.wojciechkulik.FlashSpace.plist",
-    "~/Library/Preferences/FlashSpace.plist",
-    "~/Library/HTTPStorages/pl.wojciechkulik.FlashSpace",
-    "~/Library/Saved Application State/pl.wojciechkulik.FlashSpace.savedState",
     "~/Library/Autosave Information/pl.wojciechkulik.FlashSpace.plist",
+    "~/Library/Caches/pl.wojciechkulik.FlashSpace",
+    "~/Library/HTTPStorages/pl.wojciechkulik.FlashSpace",
+    "~/Library/Preferences/FlashSpace.plist",
+    "~/Library/Preferences/pl.wojciechkulik.FlashSpace.plist",
+    "~/Library/Saved Application State/pl.wojciechkulik.FlashSpace.savedState",
   ]
 end
