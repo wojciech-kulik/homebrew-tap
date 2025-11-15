@@ -1,8 +1,8 @@
 class Xcp < Formula
   desc "A fast, lightweight command-line tool for managing Xcode projects - built entirely in Swift."
   homepage "https://github.com/wojciech-kulik/XcodeProjectCLI"
-  url "https://github.com/wojciech-kulik/XcodeProjectCLI/releases/download/v1.0.0/xcp.zip"
-  sha256 "f6e9e98852db2c9599080cfad8eb08509e8aed071f4ff40b1910b40f0a0d11a7"
+  url "https://github.com/wojciech-kulik/XcodeProjectCLI/releases/download/v1.1.0/xcp.zip"
+  sha256 "0b7a4cfbfa6720294c1f8caa269b9b490d5e0af82f147a80032aeac1f163cfd6"
   license "MIT"
 
   depends_on macos: :ventura
@@ -12,7 +12,7 @@ class Xcp < Formula
   end
 
   test do
-    assert_match "1.0.0", shell_output("#{bin}/xcp --version")
+    assert_match "1.1.0", shell_output("#{bin}/xcp --version")
   end
 end
 
